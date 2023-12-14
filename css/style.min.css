@@ -1,4 +1,3 @@
-
 html,
 body {
   width: 100%;
@@ -39,7 +38,7 @@ button:focus {
 .btn:hover,
 a:hover {
   text-decoration: none;
-  color: #333399;
+  color: rgb(255, 234, 0);
 }
 
 img {
@@ -139,27 +138,27 @@ section {
   bottom: 0;
   left: 0;
   right: 0;
-  background: hsla(144, 58%, 25%, 1);
+  background: hsla(127, 92%, 67%, 1);
 
-  background: linear-gradient(
-    90deg,
-    hsla(144, 58%, 25%, 1) 32%,
-    hsla(77, 85%, 32%, 1) 100%
+  background: radial-gradient(
+    circle,
+    hsla(127, 92%, 67%, 1) 1%,
+    hsla(144, 60%, 25%, 1) 90%
   );
 
-  background: -moz-linear-gradient(
-    90deg,
-    hsla(144, 58%, 25%, 1) 32%,
-    hsla(77, 85%, 32%, 1) 100%
+  background: -moz-radial-gradient(
+    circle,
+    hsla(127, 92%, 67%, 1) 1%,
+    hsla(144, 60%, 25%, 1) 90%
   );
 
-  background: -webkit-linear-gradient(
-    90deg,
-    hsla(144, 58%, 25%, 1) 32%,
-    hsla(77, 85%, 32%, 1) 100%
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(127, 92%, 67%, 1) 1%,
+    hsla(144, 60%, 25%, 1) 90%
   );
 
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1B673A", endColorstr="#70960C", GradientType=1 );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#5DF870", endColorstr="#196538", GradientType=1 );
 }
 .jumbotron h1 {
   line-height: 0.9;
@@ -191,13 +190,25 @@ section {
   right: 0;
   background: hsla(130, 47%, 45%, 1);
 
-background: linear-gradient(90deg, hsla(130, 47%, 45%, 1) 32%, hsla(77, 85%, 32%, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    hsla(130, 47%, 45%, 1) 32%,
+    hsla(77, 85%, 32%, 1) 100%
+  );
 
-background: -moz-linear-gradient(90deg, hsla(130, 47%, 45%, 1) 32%, hsla(77, 85%, 32%, 1) 100%);
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(130, 47%, 45%, 1) 32%,
+    hsla(77, 85%, 32%, 1) 100%
+  );
 
-background: -webkit-linear-gradient(90deg, hsla(130, 47%, 45%, 1) 32%, hsla(77, 85%, 32%, 1) 100%);
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(130, 47%, 45%, 1) 32%,
+    hsla(77, 85%, 32%, 1) 100%
+  );
 
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3EAA50", endColorstr="#70960C", GradientType=1 );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3EAA50", endColorstr="#70960C", GradientType=1 );
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .overlay.bg-white {
@@ -267,12 +278,12 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3EAA50", en
 .rectangle-1 {
   width: 2000px;
   height: 400px;
-  background: rgba( 31, 183, 85, 0.6 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 7px );
--webkit-backdrop-filter: blur( 7px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  background: rgba(31, 183, 85, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   transform-origin: 50% 150% 0;
   position: absolute;
   left: 0;
@@ -283,19 +294,23 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 .rectangle-2 {
   width: 2000px;
   height: 400px;
-  background: rgba( 31, 183, 85, 0.6 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 7px );
--webkit-backdrop-filter: blur( 7px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  background: rgba(31, 183, 85, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   transform-origin: 65% 100% 0;
   position: absolute;
   right: 0;
   z-index: 0;
   transform: scale(1) rotate(50deg);
 }
-
+.image-main {
+  width: 30%;
+  /* transform-origin: 50% 50%;
+  animation: fadeInFromTop 0.5s linear , floating ease 4s infinite; */
+}
 @keyframes fade-in-right {
   from {
     opacity: 0;
@@ -678,7 +693,6 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   text-align: center;
 }
 
-
 /*=====  End of PORTFOLIO  ======*/
 /*===============================
 =            SideNav            =
@@ -908,19 +922,17 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 ==================================*/
 @media (max-width: 992px) {
   .not-on-top #header-navbar {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     height: auto;
     width: 100%;
-    background: hsla(130, 47%, 45%, 1);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
 
-background: linear-gradient(90deg, hsla(130, 47%, 45%, 1) 32%, hsla(77, 85%, 32%, 1) 100%);
-
-background: -moz-linear-gradient(90deg, hsla(130, 47%, 45%, 1) 32%, hsla(77, 85%, 32%, 1) 100%);
-
-background: -webkit-linear-gradient(90deg, hsla(130, 47%, 45%, 1) 32%, hsla(77, 85%, 32%, 1) 100%);
-
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3EAA50", endColorstr="#70960C", GradientType=1 );
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3EAA50", endColorstr="#70960C", GradientType=1 );
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     z-index: 11;
   }
@@ -929,15 +941,12 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3EAA50", en
     padding-bottom: 15px !important;
   }
   .navbar-transparent .navbar-collapse {
-    background: hsla(130, 47%, 45%, 1);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
 
-background: linear-gradient(90deg, hsla(130, 47%, 45%, 1) 32%, hsla(77, 85%, 32%, 1) 100%);
-
-background: -moz-linear-gradient(90deg, hsla(130, 47%, 45%, 1) 32%, hsla(77, 85%, 32%, 1) 100%);
-
-background: -webkit-linear-gradient(90deg, hsla(130, 47%, 45%, 1) 32%, hsla(77, 85%, 32%, 1) 100%);
-
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3EAA50", endColorstr="#70960C", GradientType=1 );
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 10px;
   }

@@ -2,13 +2,10 @@
 <html lang="en">
 
 <head>
-    <!--
-     - Roxy: Bootstrap template by GettTemplates.com
-     - https://gettemplates.co/roxy
-    -->
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Roxy by GetTemplates.co</title>
+    <title>RAMSIA</title>
     <meta name="description" content="Roxy">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -28,6 +25,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/1.35.0/iconfont/tabler-icons.min.css"
+        integrity="sha512-tpsEzNMLQS7w9imFSjbEOHdZav3/aObSESAL1y5jyJDoICFF2YwEdAHOPdOr1t+h8hTzar0flphxR76pd0V1zQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
@@ -38,14 +39,15 @@
 </head>
 <style>
     #header-navbar {
-        background: rgba(137, 217, 148, 0.15);
+        background: rgba(255, 255, 255, 0.25);
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(7px);
-        -webkit-backdrop-filter: blur(7px);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
         border-radius: 10px;
+
         border: 1px solid rgba(255, 255, 255, 0.18);
         /* Add a blur effect to the navbar */
-        border-radius: 10px;
+        /* position: fixed; */
         /* Optional: Add border-radius for rounded corners */
         margin: 2rem;
         margin-top: 1rem;
@@ -69,28 +71,29 @@
         transform: scale(1.1);
     }
 
+    .image-main {
+        width: 40%;
+    }
+
 
 
     /* Responsive Styles */
     @media (max-width: 768px) {
-        #header-navbar {
-            background: rgba(8, 17, 9, 0.15);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-        }
+        #header-navbar {}
 
         #header-navbar a {
-            color: #000;
+            color: #ffffff;
             /* Adjust text color for smaller screens */
         }
 
         #header-navbar a:hover {
             color: #ffd700;
             /* Change the color on hover for smaller screens */
-            transform: scale(1.2);
+            transform: none;
+        }
+
+        .image-main {
+            width: 500%;
         }
     }
 
@@ -101,184 +104,106 @@
     }
 
     /* Responsive Styles */
-    @media (max-width: 768px) {
+    @media (max-width: 534px) {
 
 
         #header-navbar a {
-            color: #000;
+            color: #ffffff;
             /* Adjust text color for smaller screens */
         }
 
         #header-navbar a:hover {
             color: #ffd700;
             /* Change the color on hover for smaller screens */
+            transform: none;
+        }
 
+        .image-main {
+            width: 600%;
         }
 
 
     }
 
-    .ui-btn {
-        --btn-default-bg: #7bd046;
-        --btn-padding: 15px 20px;
-        --btn-hover-bg: rgb(255, 255, 255);
-        --btn-transition: .3s;
-        --btn-letter-spacing: .1rem;
-        --btn-animation-duration: 1.2s;
-        --btn-shadow-color: rgba(0, 0, 0, 0.137);
-        --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
-        --hover-btn-color: #3eaa50;
-        --default-btn-color: #fff;
-        --font-size: 16px;
-        /* 👆 this field should not be empty */
-        --font-weight: 600;
-        --font-family: Menlo, Roboto Mono, monospace;
-        /* 👆 this field should not be empty */
-    }
-
-    /* button settings 👆 */
-
-    .ui-btn {
-        box-sizing: border-box;
-        border-radius: 15px;
-        padding: var(--btn-padding);
+    .cta {
         display: inline-block;
-        align-items: center;
-        justify-content: center;
-        color: var(--default-btn-color);
-        font: var(--font-weight) var(--font-size) var(--font-family);
-        background: var(--btn-default-bg);
+        padding: 11px 33px;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+        color: white;
+        background: #196538;
+        transition: 1s;
+        box-shadow: 6px 6px 0 black;
+        transform: skewX(-15deg);
         border: none;
-        cursor: pointer;
-        transition: var(--btn-transition);
-        overflow: hidden;
-        box-shadow: var(--btn-shadow);
-
     }
 
-    .ui-btn span {
-        letter-spacing: var(--btn-letter-spacing);
-        transition: var(--btn-transition);
-        box-sizing: border-box;
+    .cta:focus {
+        outline: none;
+    }
+
+    .cta:hover {
+        transition: 0.5s;
+        box-shadow: 10px 10px 0 #FBC638;
+    }
+
+    .cta .second {
+        transition: 0.5s;
+        margin-right: 0px;
+    }
+
+    .cta:hover .second {
+        transition: 0.5s;
+        margin-right: 45px;
+    }
+
+    .span {
+        transform: skewX(15deg)
+    }
+
+    .second {
+        width: 20px;
+        margin-left: 30px;
         position: relative;
-        background: inherit;
-        
+        top: 12%;
     }
 
-    .ui-btn span::before {
-        box-sizing: border-box;
-        position: absolute;
-        content: "";
-        background: inherit;
+    .one {
+        transition: 0.4s;
+        transform: translateX(-60%);
     }
 
-    .ui-btn:hover,
-    .ui-btn:focus {
-        background: var(--btn-hover-bg);
+    .two {
+        transition: 0.5s;
+        transform: translateX(-30%);
     }
 
-    .ui-btn:hover span,
-    .ui-btn:focus span {
-        color: var(--hover-btn-color);
+    .cta:hover .three {
+        animation: color_anim 1s infinite 0.2s;
     }
 
-    .ui-btn:hover span::before,
-    .ui-btn:focus span::before {
-        animation: chitchat linear both var(--btn-animation-duration);
+    .cta:hover .one {
+        transform: translateX(0%);
+        animation: color_anim 1s infinite 0.6s;
     }
 
-    @keyframes chitchat {
+    .cta:hover .two {
+        transform: translateX(0%);
+        animation: color_anim 1s infinite 0.4s;
+    }
+
+    @keyframes color_anim {
         0% {
-            content: "#";
-        }
-
-        5% {
-            content: ".";
-        }
-
-        10% {
-            content: "^{";
-        }
-
-        15% {
-            content: "-!";
-        }
-
-        20% {
-            content: "#$_";
-        }
-
-        25% {
-            content: "№:0";
-        }
-
-        30% {
-            content: "#{+.";
-        }
-
-        35% {
-            content: "@}-?";
-        }
-
-        40% {
-            content: "?{4@%";
-        }
-
-        45% {
-            content: "=.,^!";
+            fill: white;
         }
 
         50% {
-            content: "?2@%";
-        }
-
-        55% {
-            content: "\;1}]";
-        }
-
-        60% {
-            content: "?{%:%";
-            right: 0;
-        }
-
-        65% {
-            content: "|{f[4";
-            right: 0;
-        }
-
-        70% {
-            content: "{4%0%";
-            right: 0;
-        }
-
-        75% {
-            content: "'1_0<";
-            right: 0;
-        }
-
-        80% {
-            content: "{0%";
-            right: 0;
-        }
-
-        85% {
-            content: "]>'";
-            right: 0;
-        }
-
-        90% {
-            content: "4";
-            right: 0;
-        }
-
-        95% {
-            content: "2";
-            right: 0;
+            fill: #FBC638;
         }
 
         100% {
-            content: "";
-            right: 0;
+            fill: white;
         }
     }
 </style>
@@ -381,20 +306,34 @@
     </div>
     <div class="jumbotron d-flex align-items-center">
         <div class="container text-center">
-            <h1 class="display-1 mb-4" style="font-family: 'Courier New', Courier, monospace;">RAMSIA</h1>
-            <p style="font-family: 'Courier New', Courier, monospace;font-size: 1.1rem;">2nd International Conference
+            <img class="image-main" src="img/ramsia.png"></img>
+            <p style="font-family: sans-serif;font-size: 1.1rem;">2nd International Conference
                 On <br>
                 Recent Advances in Mathematical Sciences and Interdisciplinary Areas (RAMSIA-2023)</p>
-            <p style="font-family: 'Courier New', Courier, monospace;font-size: 1rem;">
+            <p style="font-family:  sans-serif;font-size: 1rem;">
                 Organised By
             </p>
-            <p style="font-family: 'Courier New', Courier, monospace;font-size: 1rem;">
+            <p style="font-family:  sans-serif;">
                 Department of Mathematics
                 Institute of Applied Sciences and Humanities
                 GLA University, Mathura</p>
-            <button class="ui-btn">
-                <span>
-                    Register Now
+            <button class="cta">
+                <span class="span">Register Now</span>
+                <span class="second">
+                    <svg width="50px" height="20px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <path class="one"
+                                d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                                fill="#FFFFFF"></path>
+                            <path class="two"
+                                d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                                fill="#FFFFFF"></path>
+                            <path class="three"
+                                d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                                fill="#FFFFFF"></path>
+                        </g>
+                    </svg>
                 </span>
             </button>
         </div>
@@ -430,9 +369,9 @@
             <div class="section-content">
                 <!-- Section Title -->
                 <div class="title-wrap mb-5" data-aos="fade-up">
-                    <h2 class="section-title">
-                        Our <a href="https://gettemplates.co" target="_blank">Sponsors</a>
-                    </h2>
+                    <h1 class="section-title">
+                        Our <a href="https://gettemplates.co" target="_blank">Committee</a>
+                    </h1>
                     <!-- <p class="section-sub-title">Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
                         <br> pharetra augue. Donec id elit non mi.
                     </p> -->
@@ -444,61 +383,81 @@
                         <div class="row">
                             <!-- Features Item -->
                             <div class="col-md-4 col-sm-12 text-center mt-4">
+                                <h3>Patron</h3>
                                 <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
                                     <div class="my-4">
                                         <!-- <i class="lnr lnr-cog fs-40"></i> -->
-                                        <img src="img/ramsia.png" alt="">
+                                        <img src="img/speakers/phalguni.jpg" alt="">
                                     </div>
-                                    <h4>Ramsai</h4>
-                                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p> -->
+                                    <h4>Prof. Phalguni Gupta</h4>
+                                    <p>Vice-Chancellor <br>
+                                        GLA University, Mathura, India</p>
                                 </div>
                                 <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
                                     <div class="my-4">
                                         <!-- <i class="lnr lnr-frame-contract fs-40"></i> -->
-                                        <img src="img/gla.png" alt="">
+                                        <img src="img/speakers/anup.png" alt="">
                                     </div>
-                                    <h4>GLA University</h4>
-                                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p> -->
+                                    <h4>Prof. Anup Kumar Gupta</h4>
+                                    <p>Pro-Vice-Chancellor <br>
+                                        GLA University, Mathura, India</p>
                                 </div>
                             </div>
                             <!-- End of Feature Item -->
                             <!-- Features Item -->
                             <div class="col-md-4 col-sm-12 text-center">
+                                <h3>Chief Patron</h3>
                                 <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
                                     <div class="my-4">
                                         <!-- <i class="lnr lnr-bubble fs-40"></i> -->
-                                        <img src="img/nserb.png" alt="">
+                                        <img src="img/speakers/ndag.jpg" alt="">
                                     </div>
-                                    <h4>inserb</h4>
-                                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p> -->
+                                    <h4>Shri. Narayan Das Agrawal</h4>
+                                    <p>Hon'ble Chancellor <br>
+                                        GLA University, Mathura, India</p>
                                 </div>
                                 <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
                                     <div class="my-4">
                                         <!-- <i class="lnr lnr-magic-wand fs-40"></i> -->
-                                        <img src="img/sp.png" alt="">
+                                        <img src="img/speakers/durg.jpg" alt="">
                                     </div>
-                                    <h4>CSIR India</h4>
-                                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p> -->
+                                    <h4>Prof. Durg Singh Chauhan</h4>
+                                    <p>Hon'ble Pro Chancellor <br>
+                                        GLA University, Mathura, India</p>
                                 </div>
                             </div>
                             <!-- End of Feature Item -->
                             <!-- Features Item -->
-                            <!-- <div class="col-md-4 col-sm-12 text-center mt-4">
+                            <div class="col-md-4 col-sm-12 text-center mt-4">
+                                <h3>Patron</h3>
                                 <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
                                     <div class="my-4">
-                                        <i class="lnr lnr-clock fs-40"></i>
+                                        <img src="img/speakers/anirudh.jpg" alt="">
                                     </div>
-                                    <h4>Ontime Project</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                                    <h4>Prof. Anirudh Pradhan</h4>
+                                    <p>Distinguished Professor and Director
+                                        CCASS,<br> GLA University, Mathura, India
+                                    </p>
                                 </div>
                                 <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
                                     <div class="my-4">
-                                        <i class="lnr lnr-thumbs-up fs-40"></i>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-dots-circle-horizontal" width="68"
+                                            height="68" viewBox="0 0 24 24" stroke-width="2.5" stroke="#00b341"
+                                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                            <path d="M8 12l0 .01" />
+                                            <path d="M12 12l0 .01" />
+                                            <path d="M16 12l0 .01" />
+                                        </svg>
                                     </div>
-                                    <h4>Built with SASS</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                                    <h4>See More...</h4>
+                                    <a href="#">
+                                        <p>Click Here</p>
+                                    </a>
                                 </div>
-                            </div> -->
+                            </div>
                             <!-- End of Feature Item -->
                         </div>
                     </div>
@@ -508,7 +467,7 @@
         </div>
     </section>
     <!-- End of Features Section-->
-    <section id="section-featurettes" class="featurettes overlay bg-fixed" style="background-image: url(img/bg.jpg);">
+    <section id="section-featurettes" class="featurettes overlay bg-fixed" style="background-image: url(img/GLA.jpg);">
 
         <div class="container">
             <div class="section-content">
@@ -517,14 +476,21 @@
                         <div class="row align-items-center text-white">
 
                             <div class="col-md-4 offset-md-2 col-sm-6" data-aos="fade-right">
-                                <!-- <h4 class="mb-4">Capture every moments and share it to all your friends</h4>
-                                <p>Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius
-                                    blandit sit amet non magna. Cras mattis consectetur purus sit amet.</p>
-                                <button type="button" class="btn btn-outline-primary">FEATURES</button> -->
-                            </div><!--/ .col-md-4.col-md-offset-2.col-sm-6 -->
+                                <h2 class="mb-4">Mathura – Vrindavan
+                                </h2>
+                                <p>
+                                    The pious city of Mathura is the epicenter of BrajBhoomi and is well known worldwide
+                                    as the birthplace of the Karma Yogi Lord Krishna. It is well connected to various
+                                    parts of the country by rail and road. It is 120 km. from Delhi, the capital city of
+                                    India. The famous city of “Tajmahal”, Agra is 70 km. from Mathura.</p>
+                                <a href="">
+                                    <button type="button" class="cta">Know More</button>
+                                </a>
+                            </div> <!--/ .col-md-4.col-md-offset-right-2.col-sm-6 -->
 
                             <div class="col-md-4 offset-md-right-2 col-sm-6" data-aos="flip-right">
-                                <!-- <img class="my-5" src="img/app-profile-mockup.png" alt=""> -->
+                                <h3>Local Info :</h3>
+                                <img class="my-5" src="img/vrindavan.jpg" alt="">
                             </div><!--/ .col-md-4.col-md-offset-right-2.col-sm-6 -->
 
                         </div><!--/ .featurettes-item -->
@@ -545,21 +511,20 @@
                         <div class="row align-items-center">
 
                             <div class="col-md-4 offset-md-2 col-sm-6" data-aos="flip-left">
-                                <!-- <img class="my-5" src="img/app-profile-mockup.png" alt=""> -->
+                                <img class="my-5"  src="img/GLA.jpg" alt="">
                             </div><!--/ .col-md-4.col-md-offset-right-2.col-sm-6 -->
 
                             <div class="col-md-4 offset-md-right-2 col-sm-6" data-aos="fade-left">
-                                <!-- <h4 class="mb-4">Capture every moments and share it to all your friends</h4>
-                                <p>Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius
-                                    blandit sit amet non magna. Cras mattis consectetur purus sit amet.</p> -->
-                                <!-- <div class="progress mb-3">
+                                <h4 class="mb-4">Uttar pradesh's Best University.</h4>
+                                <p>GLA University is one of the premier universities in India, situated in Northern India. The university was established by our present Chancellor, Shri Narayan Das Agrawal in 1998. The chancellor envisioned GLA as a quality educational institution to serve the higher education needs of the youth of the region and beyond. </p>
+                                <div class="progress mb-3">
                                     <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95"
-                                        aria-valuemin="0" aria-valuemax="100">HTML5 95%</div>
+                                        aria-valuemin="0" aria-valuemax="100">Placement 95%</div>
                                 </div>
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90"
-                                        aria-valuemin="0" aria-valuemax="100">CSS3 90%</div>
-                                </div> -->
+                                        aria-valuemin="0" aria-valuemax="100">Results 90%</div>
+                                </div>
                             </div><!--/ .col-md-4.col-md-offset-2.col-sm-6 -->
 
                         </div><!--/ .featurettes-item -->
@@ -577,7 +542,7 @@
             <div class="section-content" data-aos="fade-up">
                 <div class="heading-section text-center">
                     <h2>
-                        User Testimonials
+                        Keynote Speakers
                     </h2>
                 </div>
                 <div class="row">
@@ -585,11 +550,10 @@
                     <div class="testi-content testi-carousel owl-carousel">
                         <div class="testi-item text-center">
                             <i class="testi-icon fa fa-3x fa-quote-left"></i>
-                            <!-- <h4 class="testi-text"><b>ROXY</b> is best theme i used so far.<br> It’s ideal for guys
-                                without coding knowledge like me!</h4> -->
+                            <h4 class="testi-text"><br>Prof. Sunny Vagnozzi</br> University of Trento</h4>
                             <div class="testi-meta-inner d-flex justify-content-center align-items-center">
                                 <div class="testi-img mr-2">
-                                    <!-- <img src="img/testi-1.jpg" alt=""> -->
+                                    <img src="img/speakers/Sunny.jpg" alt="">
                                 </div>
                                 <!-- <div class="testi-details">
                                     <p class="testi-author mb-0 font-weight-bolder">John Doe</p>
@@ -600,12 +564,10 @@
                         </div>
                         <div class="testi-item text-center">
                             <i class="testi-icon fa fa-3x fa-quote-left"></i>
-                            <!-- <h4 class="testi-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
-                                <br> non doloribus ut, alias doloremque perspiciatis.
-                            </h4> -->
+                            <h4 class="testi-text"><br>Prof. Dumitru Baleanu</br> Cankaya University, Romania</h4>
                             <div class="testi-meta-inner d-flex justify-content-center align-items-center">
                                 <div class="testi-img mr-2">
-                                    <!-- <img src="img/testi-1.jpg" alt=""> -->
+                                    <img src="img/speakers/dumitru.jpg" alt="">
                                 </div>
                                 <div class="testi-details">
                                     <!-- <p class="testi-author mb-0 font-weight-bolder">John Doe</p>
@@ -615,12 +577,25 @@
                         </div>
                         <div class="testi-item text-center">
                             <i class="testi-icon fa fa-3x fa-quote-left"></i>
-                            <!-- <h4 class="testi-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
-                                <br> non doloribus ut, alias doloremque perspiciatis. -->
+                            <h4 class="testi-text"><br>Prof. Kazuharu Bamba</br> Nagoya University, Japan</h4>
                             </h4>
                             <div class="testi-meta-inner d-flex justify-content-center align-items-center">
                                 <div class="testi-img mr-2">
-                                    <!-- <img src="img/testi-1.jpg" alt=""> -->
+                                    <img src="img/speakers/bamba.jpg" alt="">
+                                </div>
+                                <div class="testi-details">
+                                    <!-- <p class="testi-author mb-0 font-weight-bolder">John Doe</p>
+                                    <p class="testi-desc mb-0">Web Designer</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testi-item text-center">
+                            <i class="testi-icon fa fa-3x fa-quote-left"></i>
+                            <h4 class="testi-text"><br>Prof. Jitendra Kumar</br> IIT Kharagpur, India</h4>
+                            </h4>
+                            <div class="testi-meta-inner d-flex justify-content-center align-items-center">
+                                <div class="testi-img mr-2">
+                                    <img src="img/speakers/jitendra.jpg" alt="">
                                 </div>
                                 <div class="testi-details">
                                     <!-- <p class="testi-author mb-0 font-weight-bolder">John Doe</p>
@@ -629,6 +604,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <!-- End of Testimonial -->
                 </div>
             </div>
@@ -647,22 +623,22 @@
                 </div>
                 <!-- End of Section Title -->
                 <!-- <div class="row"> -->
-                    <!-- Portfolio Holder -->
-                    <!-- <div class="col-md-12 portfolio-holder mt-3"> -->
-                        <!-- Btn Filter -->
-                        <!-- <div class="filter-button-group btn-filter d-flex justify-content-center">
+                <!-- Portfolio Holder -->
+                <!-- <div class="col-md-12 portfolio-holder mt-3"> -->
+                <!-- Btn Filter -->
+                <!-- <div class="filter-button-group btn-filter d-flex justify-content-center">
                             <a tabindex="0" class="is-checked" data-filter="*">Show All</a>
                             <a tabindex="0" data-filter=".minimalism">Minimalism</a>
                             <a tabindex="0" data-filter=".vintage">Vintage</a>
                             <a tabindex="0" data-filter=".creative">Creative</a>
                         </div> -->
-                        <!-- End of Btn Filter -->
-                        <!-- Portfolio Content -->
-                        <!-- <div class="grid-portfolio">
+                <!-- End of Btn Filter -->
+                <!-- Portfolio Content -->
+                <!-- <div class="grid-portfolio">
                             <div class="grid-sizer"></div>
                             <div class="gutter-sizer"></div> -->
-                            <!-- Portfolio Item -->
-                            <!-- <div class="grid-item minimalism" data-aos="fade-up">
+                <!-- Portfolio Item -->
+                <!-- <div class="grid-item minimalism" data-aos="fade-up">
                                 <div class="grid-item-wrapper">
                                     <img src="img/photo-1.jpg" alt="portfolio-img" class="portfolio-item">
                                     <div class="grid-info">
@@ -682,9 +658,9 @@
 
                                 </div>
                             </div> -->
-                            <!-- End of Portfolio Item -->
-                            <!-- Portfolio Item -->
-                            <!-- <div class="grid-item vintage" data-aos="fade-up">
+                <!-- End of Portfolio Item -->
+                <!-- Portfolio Item -->
+                <!-- <div class="grid-item vintage" data-aos="fade-up">
                                 <div class="grid-item-wrapper">
                                     <img src="img/photo-6.jpg" alt="portfolio-img" class="portfolio-item">
                                     <div class="grid-info">
@@ -703,9 +679,9 @@
 
                                 </div>
                             </div> -->
-                            <!-- End of Portfolio Item -->
-                            <!-- Portfolio Item -->
-                            <!-- <div class="grid-item creative grid-item-height" data-aos="fade-up">
+                <!-- End of Portfolio Item -->
+                <!-- Portfolio Item -->
+                <!-- <div class="grid-item creative grid-item-height" data-aos="fade-up">
                                 <div class="grid-item-wrapper">
                                     <img src="img/photo-2.jpg" alt="portfolio-img" class="portfolio-item">
                                     <div class="grid-info">
@@ -725,9 +701,9 @@
 
                                 </div>
                             </div> -->
-                            <!-- End of Portfolio Item -->
-                            <!-- Portfolio Item -->
-                            <!-- <div class="grid-item creative" data-aos="fade-up">
+                <!-- End of Portfolio Item -->
+                <!-- Portfolio Item -->
+                <!-- <div class="grid-item creative" data-aos="fade-up">
                                 <div class="grid-item-wrapper">
                                     <img src="img/photo-7.jpg" alt="portfolio-img" class="portfolio-item">
                                     <div class="grid-info">
@@ -747,9 +723,9 @@
 
                                 </div>
                             </div> -->
-                            <!-- End of Portfolio Item -->
-                            <!-- Portfolio Item -->
-                            <!-- <div class="grid-item vintage" data-aos="fade-up">
+                <!-- End of Portfolio Item -->
+                <!-- Portfolio Item -->
+                <!-- <div class="grid-item vintage" data-aos="fade-up">
                                 <div class="grid-item-wrapper">
                                     <img src="img/photo-4.jpg" alt="portfolio-img" class="portfolio-item">
                                     <div class="grid-info">
@@ -769,9 +745,9 @@
 
                                 </div>
                             </div> -->
-                            <!-- End of Portfolio Item -->
-                            <!-- Portfolio Item -->
-                            <!-- <div class="grid-item creative" data-aos="fade-up">
+                <!-- End of Portfolio Item -->
+                <!-- Portfolio Item -->
+                <!-- <div class="grid-item creative" data-aos="fade-up">
                                 <div class="grid-item-wrapper">
                                     <img src="img/photo-9.jpg" alt="portfolio-img" class="portfolio-item">
                                     <div class="grid-info">
@@ -791,13 +767,13 @@
 
                                 </div>
                             </div> -->
-                            <!-- End of Portfolio Item -->
-                        <!-- </div> -->
-                        <!-- End of Portfolio Content -->
-                    <!-- </div> -->
-                    <!-- End of Portfolio Holder -->
-                </div>
+                <!-- End of Portfolio Item -->
+                <!-- </div> -->
+                <!-- End of Portfolio Content -->
+                <!-- </div> -->
+                <!-- End of Portfolio Holder -->
             </div>
+        </div>
         </div>
     </section>
     <!-- End of Portfolio Section --> <!-- Client Section -->
@@ -862,7 +838,7 @@
                                     <input type="number" class="form-control" id="phoneNumber" name="phoneNumber"
                                         placeholder="Phone">
                                 </div>
-                                
+
                                 <div class="col-md-12 form-group">
                                     <textarea class="form-control" id="message" name="message" rows="6"
                                         placeholder="Your Message ..."></textarea>
@@ -879,7 +855,12 @@
                     <h2 class="mb-4">
                         About Us
                     </h2>
-                    <p class="mb-4">In 1991, Shri Narayan Das Agrawal decided to fulfill his father's dream, the Late Shri Ganeshi Lal Agrawal, of establishing an institute for quality education for the people and the region & beyond. And initiated Sri Jagannath Prasad Ganeshi Lal Bazaz Charitable Trust Samiti to make the holy city Mathura a recognized destination for knowledge seekers from different spheres of life. This led to the foundation of a milestone at the karmabhoomi of the versatile and sagacious Lord Krishna.</p>
+                    <p class="mb-4">In 1991, Shri Narayan Das Agrawal decided to fulfill his father's dream, the Late
+                        Shri Ganeshi Lal Agrawal, of establishing an institute for quality education for the people and
+                        the region & beyond. And initiated Sri Jagannath Prasad Ganeshi Lal Bazaz Charitable Trust
+                        Samiti to make the holy city Mathura a recognized destination for knowledge seekers from
+                        different spheres of life. This led to the foundation of a milestone at the karmabhoomi of the
+                        versatile and sagacious Lord Krishna.</p>
 
                     <!-- <ul class="list-inline py-2">
                         <li class="list-inline-item text-center">
